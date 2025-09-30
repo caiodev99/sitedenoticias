@@ -1,0 +1,17 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+body {
+    background-color: lightyellow;
+    color: darkred;
+    font-family: sans-serif;
+}
+body h1{
+    color: red;
+}
+.conteudo {
+    display: flex;
+    align-items: center;
+    
+}
