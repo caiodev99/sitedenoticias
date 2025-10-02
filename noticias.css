@@ -99,3 +99,26 @@ main{
   margin-top: 30px;
   border-radius: 15px;
 }
+@media (max-width: 1061px) {
+  main{
+    width: 80vw;
+  }
+  .noticiaprincipal img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .outrasnoticias img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Para fazer um responsivo a tag é "@media e (definir o min ou máx de largura em pixels e ap partir daí ineserir a tag de classe ou de tipo */ 
+/* porcentagem se conecta com o elemento pai e vw se baseia na tela */
+@media (max-width: 866px) {
+  .outrasnoticias {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
