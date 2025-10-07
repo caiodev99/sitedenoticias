@@ -1,105 +1,115 @@
-body {
+  body {
     font-family: sans-serif;
-}
-*{
-padding: 0;
-margin: 0;
-}
-header {
-  background-color: #6F1D1B;
-  color: #B78D47;
-  padding: 30px 0;
-  text-align: center;
-}
+  }
 
-header h1 {
-  font-size: 40px;
-}
+  * {
+    padding: 0;
+    margin: 0;
+  }
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
+  header {
+    background-color: #6F1D1B;
+    color: #B78D47;
+    padding: 30px 0;
+    text-align: center;
+  }
 
-header nav a:hover {
-  color: goldenrod;
-}
+  header h1 {
+    font-size: 40px;
+  }
 
-header nav {
-  margin-top: 20px;
-}
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 
-footer {
-  background-color: #6F1D1B;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 20px;
-  margin-top: 25px;
-} 
-.noticiaprincipal {
-  background-color: #F5F5DC;
-  color: #432818;
-  border-radius: 5px;
-  padding: 40px 80px;
-box-shadow: 0px 4px 43px 5px rgba(0,0,0,0.71);
--webkit-box-shadow: 0px 4px 43px 5px rgba(0,0,0,0.71);
--moz-box-shadow: 0px 4px 43px 5px rgba(0,0,0,0.71);
-}
-.noticiaprincipal img{
-  width: 400px;
-  height: 200px;
-  object-fit: fill;
-  border-radius: 20px;
-  padding: 10px;
-}
-.noticiaprincipal h2 {
-  margin-top: 14px;
-  margin-bottom: 14px;
-  color: #6F1D1B ;
-}
-.outrasnoticias {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-  padding-top: 30px;
-}
+  header nav a:hover {
+    color: goldenrod;
+  }
 
-.outrasnoticias img{
-  width: 250px;
-  height: 140px;
-  object-fit: fill;
-  border-radius: 20px;
-}
-.outrasnoticias h3{
-  color: #6F1D1B; 
-  padding-top: 5px;
+  header nav {
+    margin-top: 20px;
+  }
 
-}
-.outrasnoticias p{
-  color: #432818;
-  text-align: justify;
-  padding-top: 10px;
-}
-body{
-  background-color: #FFE6A7;
-}
-main{
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.45);
-  box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.45);
-  width: 1000px;
-  background-color: #BB9457;
-  margin: auto;
-  color: white; 
-  text-align: center ;
-  padding: 30px 20px;
-  margin-top: 30px;
-  border-radius: 15px;
-}
+  .icone-menu {
+    display: none;
+  }
 
+  .noticiaprincipal {
+    background-color: #F5F5DC;
+    color: #432818;
+    border-radius: 5px;
+    padding: 20px 40px;
+    box-shadow: 0px 4px 43px 5px rgba(0, 0, 0, 0.71);
+    -webkit-box-shadow: 0px 4px 43px 5px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 0px 4px 43px 5px rgba(0, 0, 0, 0.71);
+  }
+
+  .noticiaprincipal img {
+    width: 400px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .noticiaprincipal h2 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    color: #6F1D1B;
+  }
+
+  .outrasnoticias {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+
+
+  .outrasnoticias article {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .outrasnoticias img {
+    width: 250px;
+    height: 140px;
+    object-fit: fill;
+    border-radius: 20px;
+  }
+
+  .outrasnoticias h3 {
+    color: #6F1D1B;
+    padding-top: 5px;
+
+  }
+
+  .outrasnoticias p {
+    color: #432818;
+    text-align: justify;
+    padding-top: 10px;
+  }
+
+  body {
+    background-color: #FFE6A7;
+  }
+
+  main {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.45);
+    width: 1000px;
+    background-color: #BB9457;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+  }
 
   @media (max-width: 1061px) {
     main {
@@ -138,51 +148,53 @@ main{
   }
 
   @media (max-width: 620px) {
-  header nav {
-    display: none;
+    header nav {
+      display: none;
+    }
+
+    header h1 {
+      font-size: 25px;
+      text-align: left;
+    }
+
+    header {
+      padding: 20px 30px;
+    }
+
+    /* IMPORTANTE: O nav precisa estar dentro do header quando menu-ativo estiver ativo */
+    .header-mobile.menu-ativo+nav {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    /* OU use esta versão se o nav estiver dentro da div header-mobile */
+    header.menu-ativo nav {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    .header-mobile nav a {
+      font-size: 20px;
+      padding: 15px 0;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.505);
+    }
+
+    .header-mobile {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .header-mobile img {
+      width: 30px;
+    }
+
+    .header-mobile img:hover {
+      cursor: pointer;
+    }
+
+    .icone-menu {
+      display: block;
+    }
   }
 
-  header h1 {
-    font-size: 25px;
-    text-align: left;
-  }
-
-  header {
-    padding: 20px 30px;
-  }
-
-  /* IMPORTANTE: O nav precisa estar dentro do header quando menu-ativo estiver ativo */
-  .header-mobile.menu-ativo + nav {
-    display: flex !important;
-    flex-direction: column;
-  }
-
-  /* OU use esta versão se o nav estiver dentro da div header-mobile */
-  header.menu-ativo nav {
-    display: flex !important;
-    flex-direction: column;
-  }
-
-  .header-mobile nav a {
-    font-size: 20px;
-    padding: 15px 0;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.505);
-  }
-
-  .header-mobile {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header-mobile img {
-    width: 30px;
-  }
-
-  .header-mobile img:hover {
-    cursor: pointer;
-  }
-
-  .icone-menu {
-    display: block;
-  }
-}
+  

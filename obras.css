@@ -1,0 +1,55 @@
+.obras-introducao {
+    padding: 22px;
+    background-color: #6F1D1B;
+    color: #FFE6A7;
+    margin-bottom: 20px;
+}
+
+.obras-introducao h1 {
+    margin-bottom: 10px;
+}
+
+.primeiro-paragrafo {
+    color: #6F1D1B;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.obras-conteudo h2 {
+    color: #FFE6A7;
+    font-style: oblique;
+    margin-bottom: 20px;
+}
+
+.obras-conteudo section {
+    margin-bottom: 40px;
+}
+
+.obras-conteudo section h3 {
+    margin-bottom: 15px;
+}
+
+.obras-conteudo section img {
+    width: 300px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 250px;
+    box-shadow: -3px 6px 20px 7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -3px 6px 20px 7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -3px 6px 20px 7px rgba(0, 0, 0, 0.75);
+}
+
+.obras-conteudo section p {
+    text-align: justify;
+    margin-right: 250px;
+    
+}
+
+/* Limpa o float após cada section */
+.obras-conteudo section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
