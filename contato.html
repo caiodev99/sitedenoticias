@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="noticias.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="shortcut icon" href="https://www.caravaggio.org/assets/img/logo.png" type="image/x-icon">
+    <title>Barrocada</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-mobile">
+            <h1>Barrocada</h1>
+            <img class="icone-menu" src="Imagens/Menuicon.png" alt="menu de icones da navegacao">
+            <!--  ↑ Adicione isso aqui -->
+        </div>
+
+        <nav>
+            <a href="index.html">Inicío</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="">Quadros</a>
+            <a href="">Movimento Artístico</a>
+            <a href="">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao-formulario">
+            <h2>Formulário para contato</h2>
+
+            <form id="meu-formulario" action="https://formspree.io/f/xgvnzgeq" method="POST">
+                <div>
+                    <label for="nome" class="margem">Nome</label>
+                    <input type="text" name="nome" id="nome">
+                    <!--Para setar o nome precisamos do ID e o FOR com o mesmo nome-->
+                </div>
+
+                <div>
+                    <label for="sobrenome" class="margem">Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                </div>
+
+                <div>
+                    <label for="idade" class="margem">Idade</label>
+                    <input type="number" name="idade" id="idade">
+                </div>
+
+                <div>
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" name="dataNascimento" id="dataNascimento">
+                </div>
+
+                <div>
+                    <h3>Interesses</h3>
+                    <div>
+                        <label for="backend">Backend</label>
+                        <input type="checkbox" name="backend" id="backend">
+                    </div>
+                    <div>
+
+                        <div>
+                            <label for="frontend">Frontend</label>
+                            <input type="checkbox" name="frontend" id="frontend">
+                        </div>
+
+                        <div>
+                            <label for="bancoDeDados">Banco de Dados</label>
+                            <input type="checkbox" name="bancoDeDados" id="bancoDeDados">
+                        </div>
+
+                    </div>
+
+
+                    <div>
+                        <h3>Gênero</h3>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="genero" id="masculino">
+                    </div>
+                    <div>
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" name="genero" id="feminino">
+                    </div>
+                    <div>
+                        <label for="outro">Outro</label>
+                        <input type="radio" name="genero" id="outro">
+                    </div>
+
+                    <div>
+                        <label for="email" class="margem">Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+
+                    <div>
+                        <label for="assunto" class="margem">Assunto</label>
+                        <select name="assunto" id="assunto">
+                            <option></option>
+                            <option value="reclamações">Reclamações</option>
+                            <option value="elogios">Elogios</option>
+                            <option value="duvidas">Dúvidas</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensagem" class="margem"> Digite sua mensagem</label>
+                        <textarea name="mensagem" id="mensagem"></textarea>
+                    </div>
+
+
+                    <button type="submit">Enviar formulário</button>
+
+            </form>
+        </section>
+
+        <p id="status-formulario-ok"></p>
+        <p id="status-formulario-not-ok"></p>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Caio Higor</p>
+    </footer>
+</body>
+
+
+<script>
+    const iconeMenu = document.querySelector('.icone-menu');
+    const header = document.querySelector('header');
+
+    iconeMenu.addEventListener('click', () => {
+        header.classList.toggle('menu-ativo');
+    });
+</script>
+
+<script>
+var form = document.getElementById("meu-formulario");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var statusOk = document.getElementById("status-formulario-ok");
+    var statusNotOk = document.getElementById("status-formulario-not-ok");
+
+    // Limpa mensagens anteriores
+    statusOk.innerHTML = "";
+    statusNotOk.innerHTML = "";
+
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            statusOk.innerHTML = "✅ Sucesso! Obrigado por enviar!";
+            form.reset();
+        } else {
+            statusNotOk.innerHTML = "❌ Ops! Houve um erro. Tente novamente.";
+        }
+    }).catch(error => {
+        statusNotOk.innerHTML = "❌ Ops! Houve um erro ao enviar seu formulário. Revise as informações e envie novamente.";
+    });
+}
+form.addEventListener("submit", handleSubmit);
+</script>
+
+
+</html>

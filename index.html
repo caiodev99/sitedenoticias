@@ -5,18 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="noticias.css">
+  <link rel="shortcut icon" href="https://www.caravaggio.org/assets/img/logo.png" type="image/x-icon">
   <title>Barrocada</title>
 </head>
 
 <body>
   <header>
-    <h1>Barrocada</h1>
+    <div class="header-mobile">
+      <h1>Barrocada</h1>
+      <img class="icone-menu" src="Imagens/Menuicon.png" alt="menu de icones da navegacao">
+    </div>
+
     <nav>
       <a href="index.html">Inicío</a>
       <a href="artistas.html">Artistas</a>
       <a href="">Quadros</a>
       <a href="">Movimento Artístico</a>
-      <a href="">Contato</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
@@ -65,5 +70,14 @@
     <p>Desenvolvido por Caio Higor</p>
   </footer>
 </body>
+
+<script>
+  const iconeMenu = document.querySelector('.icone-menu');
+  const header = document.querySelector('header');
+
+  iconeMenu.addEventListener('click', () => {
+    header.classList.toggle('menu-ativo');
+  });
+</script>
 
 </html>

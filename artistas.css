@@ -25,7 +25,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #8B0000;
+  color: goldenrod;
 }
 
 header nav {
@@ -98,4 +98,91 @@ main{
   padding: 30px 20px;
   margin-top: 30px;
   border-radius: 15px;
+}
+
+
+  @media (max-width: 1061px) {
+    main {
+      width: 80vw;
+    }
+
+    .noticiaprincipal img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .outrasnoticias img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 866px) {
+    .outrasnoticias {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .outrasnoticias article {
+      width: 100%;
+    }
+
+    .outrasnoticias img {
+      max-height: 250px;
+    }
+  }
+
+  @media (max-width: 620px) {
+  header nav {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 25px;
+    text-align: left;
+  }
+
+  header {
+    padding: 20px 30px;
+  }
+
+  /* IMPORTANTE: O nav precisa estar dentro do header quando menu-ativo estiver ativo */
+  .header-mobile.menu-ativo + nav {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  /* OU use esta versão se o nav estiver dentro da div header-mobile */
+  header.menu-ativo nav {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .header-mobile nav a {
+    font-size: 20px;
+    padding: 15px 0;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.505);
+  }
+
+  .header-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-mobile img {
+    width: 30px;
+  }
+
+  .header-mobile img:hover {
+    cursor: pointer;
+  }
+
+  .icone-menu {
+    display: block;
+  }
 }
