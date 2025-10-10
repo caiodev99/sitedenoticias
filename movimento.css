@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .obras-introducao {
     padding: 22px;
     background-color: #6F1D1B;
@@ -9,36 +13,72 @@
     margin-bottom: 10px;
 }
 
-.primeiro-paragrafo {
-    color: #6F1D1B;
-    font-weight: bolder;
-    margin-bottom: 50px;
+.obras-conteudo {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 200px;
 }
 
 .obras-conteudo h2 {
     color: #FFE6A7;
     font-style: oblique;
     margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
 }
 
-.obras-conteudo section h3 {
-    margin-bottom: 15px;
+.obras-conteudo h3 {
+    margin-bottom: 15px
 }
 
 .obras-conteudo section img {
     width: 300px;
+    max-width: 100%;
     height: auto;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
     box-shadow: -3px 6px 20px 7px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -3px 6px 20px 7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -3px 6px 20px 7px rgba(0, 0, 0, 0.75);
 }
 
 .obras-conteudo section p {
-    text-align: justify;    
+    margin: 0 20px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
+
+.obra-e-texto {
+    gap: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.obra-e-texto img {
+    float: left;
+    margin: 0 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.obra-e-texto h3 {
+    margin: 0 0 10px 0;
+}
+
+.obra-e-texto h3 {
+    order: -1;
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.obra-e-texto p {
+    flex: 1 1 auto;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -62,18 +102,25 @@ footer {
 @media (max-width:1060px) {
     .obra-e-texto {
         flex-direction: column;
-        align-items: center;    
+        align-items: center;
     }
-    .obras-conteudo section{
-        width: 80vw;
-        margin: auto;
-        margin-bottom: 30px;
+
+    .obras-conteudo section {
+        width: 100%;
+        margin: 0 auto 30px auto;
     }
+
     .obras-conteudo section img {
-        margin: 0;
+        margin: 0 0 20px 0;
+        width: 100%;
     }
-    .obras-conteudo section p{
+
+    .obras-conteudo section p {
         margin: 0;
         margin-top: 20px;
+    }
+
+    .obras-conteudo {
+        padding: 20px 16px;
     }
 }

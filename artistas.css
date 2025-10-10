@@ -161,13 +161,11 @@
       padding: 20px 30px;
     }
 
-    /* IMPORTANTE: O nav precisa estar dentro do header quando menu-ativo estiver ativo */
     .header-mobile.menu-ativo+nav {
       display: flex !important;
       flex-direction: column;
     }
 
-    /* OU use esta versão se o nav estiver dentro da div header-mobile */
     header.menu-ativo nav {
       display: flex !important;
       flex-direction: column;
