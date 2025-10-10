@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="noticias.css">
+    <link rel="stylesheet" href="movimento.css">
+    <link rel="shortcut icon" href="https://www.caravaggio.org/assets/img/logo.png" type="image/x-icon">
+    <title>Barrocada</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-mobile">
+            <h1>Barrocada</h1>
+            <img class="icone-menu" src="Imagens/Menuicon.png" alt="menu de icones da navegacao">
+        </div>
+
+        <nav>
+            <a href="index.html">Inicío</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="obras.html">Obras</a>
+            <a href="movimento.html">Movimento Artístico</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="obras-introducao">
+            <h1>O Barroco: A Arte do Excesso e da Emoção</h1>
+            <p>Entre luz e sombra, o movimento que marcou a transição entre a fé e a razão.</p>
+        </div>
+
+
+
+        <div class="obras-conteudo">
+
+            <h2>AS OBRAS MAIS FAMOSAS DO BARROCO</h2>
+            <section>
+                <div class="obra-e-texto">
+                    <img src="Imagens/caravaggio-vocacao-sao-mateus-d.jpg"
+                        alt="Pintura A Vocação de São Mateus de Caravaggio">
+                    <h3>1. A Vocação de São Mateus — <span>Caravaggio (1599–1600)</span></h3>
+                    <p>O Barroco foi um movimento artístico, cultural e literário que surgiu na Europa no final do
+                        século XVI, como uma resposta emocional e espiritual ao racionalismo e à simplicidade do
+                        Renascimento. Marcado pelo dramatismo, contraste e exuberância, o Barroco expressava a tensão
+                        entre o divino e o humano, a razão e a fé, o mundo terreno e o espiritual.
+
+                        Nas artes plásticas, artistas como Caravaggio, Bernini e Velázquez exploraram intensamente o
+                        jogo de luz e sombra, criando composições que buscavam comover e impressionar o observador. Na
+                        literatura, autores como Gregório de Matos e Padre Antônio Vieira, no Brasil, refletiram essa
+                        dualidade através de temas religiosos, moralistas e críticos.
+
+                        A estética barroca também se manifestou na arquitetura, com igrejas ornamentadas, curvas
+                        dinâmicas e dourados reluzentes, representando a grandiosidade da fé e o poder da Igreja. No
+                        Brasil, o estilo atingiu o auge com obras de Aleijadinho e Mestre Ataíde, principalmente em
+                        Minas Gerais.
+
+                        Mais do que um estilo, o Barroco foi uma visão de mundo, onde a arte se tornou um espelho das
+                        emoções humanas — contraditórias, intensas e profundamente espirituais.</p>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Caio Higor</p>
+    </footer>
+</body>
+
+<script>
+    const iconeMenu = document.querySelector('.icone-menu');
+    const header = document.querySelector('header');
+
+    iconeMenu.addEventListener('click', () => {
+        header.classList.toggle('menu-ativo');
+    });
+</script>
+
+</html>
